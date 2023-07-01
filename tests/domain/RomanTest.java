@@ -1,6 +1,5 @@
 package domain;
 
-import domain.Roman;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
@@ -37,7 +36,7 @@ public class RomanTest {
 
     @Test
     public void withWrongerOrder() {
-        assertEquals(null, "XM");
+        assertEquals(null, Roman.convert("XM"));
     }
 
     @Test
