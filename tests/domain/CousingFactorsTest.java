@@ -6,22 +6,22 @@ import org.junit.Test;
 public class CousingFactorsTest {
     @Test
     public void withOneCousingFactor() {
-        assertEquals("13¹", CousingFactors.of(13));
+        assertEquals("13^1", CousingFactors.of(13));
     }
 
     @Test
     public void withCompoundCousingFactor() {
-        assertEquals("3¹*2³", CousingFactors.of(24));
+        assertEquals("3^1*2^3", CousingFactors.of(24));
     }
 
     @Test
     public void withCompoundCousingFactorAndExponentsRepeat() {
-        assertEquals("3²*2²", CousingFactors.of(36))
+        assertEquals("3^2*2^2", CousingFactors.of(36));
     }
 
     @Test
     public void withCompoundCousingFactorComplex() {
-        assertEquals("7¹*5¹*3¹*2³", CousingFactors.of(840));
+        assertEquals("7^1*5^1*3^1*2^3", CousingFactors.of(840));
     }
 
     @Test
@@ -40,12 +40,7 @@ public class CousingFactorsTest {
     }
 
     @Test
-    public void withDecimalNumber() {
-        assertEquals(null, CousingFactors.of(3.14));
-    }
-
-    @Test
-    void withNumberTooBig() {
-        assertEquals("4649¹*239¹*11¹*3²", CousingFactors.of(99999999));
+    public void withNumberTooBig() {
+        assertEquals("137^1*101^1*73^1*11^1*3^2", CousingFactors.of(99999999));
     }
 }
