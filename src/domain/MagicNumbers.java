@@ -20,7 +20,7 @@ public class MagicNumbers {
     
             int res = descendingNumber - ascendingNumber;
             if(res==num){
-                 magic= true;
+                 return true;
                  return magic;
             }
             else{
