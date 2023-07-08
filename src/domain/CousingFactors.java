@@ -4,19 +4,20 @@ import static java.lang.Math.sqrt;
 
 import java.util.Stack;
 
-/* The CousingFactors class provides a method that find thes factors
+/*
+ * The CousingFactors class provides a method that find thes factors
  */
-
 public class CousingFactors {
     private static int cantFactors = 0;
 
     /*
      * Reverses the order of items in a stack and saves them in an array.
+     * 
+     * @param a is the items to invert
+     * @param n is the quantify of item.
+     * @return An array that contains the elements of the stack in reverse
+     * order.
      */
-    // a is the items to invert
-    // n is the quantify of items
-    // return b tha is an array that contains the elements of the stack in reverse
-    // order.
     private static String[] reverse(Stack<String> a, int n) {
         String[] b = new String[n];
         int j = n;
@@ -26,23 +27,25 @@ public class CousingFactors {
         }
         return b;
     }
-    /*
-     * The function ensureNumberIsPositiveAndMajorOneCheck check if a number is
-     * positive and greater than 1.
-     * Return true if the numebr is postive and major one, or else flasd if the
-     * number doesn't meet the conditions
-     */
 
+    /*
+     * The function check if a number is positive and greater than 1.
+     * 
+     * @param number The number to validate. 
+     * @return true if the number is positive and major one, false otherwise.
+     */
     private static boolean ensureNumberIsPositiveAndMajorOne(int number) {
         return number > 1;
     }
 
     /*
-     * The isCousing function checks whether a given number is a prime number.
-     * The hasDivisors variable as false to indicate that no divisors have been
+     * The function checks whether a given number is a prime number.
+     * The hasDivisors varialbe as false to indicate that no divisors have been
      * found yet.
+     * 
+     * @param number The number to check.
+     * @return true if the number is prime, false otherwise.
      */
-
     private static boolean isCousing(int number) {
         boolean hasDivisors = false;
         int i = 2;
@@ -54,9 +57,13 @@ public class CousingFactors {
         }
         return !hasDivisors;
     }
-    // The function nextFactor find the next cousing number major to the given
-    // number
-    // Returns the next cousing number major to the given number
+
+    /*
+     * The function find the next cousing factor major to the given number
+     * 
+     * @param number is the inicial number
+     * @return the next cousing number major to the given number
+     */
 
     private static int nextFactor(int number) {
         do {
@@ -66,9 +73,10 @@ public class CousingFactors {
     }
 
     /*
-     * The funtion writeFactor generates the string representation of a cousing
-     * factor, including the factors of one.
-     * Return the string representation of cousing factor
+     * The function generates the string representation of a cousing
+     * 
+     * @param factor is the cousing factor
+     * @return the string representation of cousing factor
      */
     private static String writeFactor(int factor) {
         String factorString = "";
@@ -82,12 +90,13 @@ public class CousingFactors {
         }
         return factorString;
     }
+
     /*
-     * The function factorize descompose a number into its cousing factors and
-     * returns
-     * them in an array.
-     * return an array containing the cousing factors of the number in the form of
-     * strings.
+     * The function descompose a number into its cousing factors and return then in
+     * array.
+     * 
+     * @param number is the number to descompose
+     * @return an array containing the cousing factors of number in form of strings
      */
 
     private static String[] factorize(int number) {
@@ -106,15 +115,15 @@ public class CousingFactors {
         String[] returnedArrayWithFactors = reverse(factorString, factorString.size());
         return returnedArrayWithFactors;
     }
-    /*
-     * The method of gets the representation of the cousing factors of a number as a
-     * string.
-     * number is The number from the cousing factors will be obtained.
-     * Return a string representing the cousing factors of the number separated by
-     * the '*' character.
-     * If the number is invalid, null is returned.
-     */
 
+    /*
+     * The function gets the representation of the cousing factors of a numeber as a
+     * string
+     * 
+     * @param number is the number of the cousing factor will be obtained.
+     * @return a string representing the cousing factors of the number separed by
+     * the '*' character. If the number is invalid, null is returned
+     */
     public static String of(int number) {
         if (!ensureNumberIsPositiveAndMajorOne(number)) {
             return null;
