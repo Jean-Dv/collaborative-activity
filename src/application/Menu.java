@@ -82,6 +82,9 @@ public class Menu {
         } while (true);
     }
 
+    /**
+     * Prompts the user for a number and displays the prime factors of the number.
+     */
     public static void cousings() {
         do {
             String numberString = JOptionPane.showInputDialog("Enter a number");
