@@ -13,10 +13,10 @@ This is a collaborative activity for the course of Software Engineering at the U
 
 ### From VSCode
 
-1. Clone the repository
+1. Clone the repositoryEnter a correct value
 2. Open the project in VSCode
 3. Open the `src` folder
-4. Open the `Main.java` file
+4. Open the `src/application/Menu.java` file
 5. Click on the `Run` button on the top right corner of the editor
 
 ### Or from the terminal
@@ -37,7 +37,7 @@ javac src/**/*.java -d bin
 3. Run the project
 
 ```bash
-java -cp bin Main
+java -cp bin application.Menu
 ```
 
 
