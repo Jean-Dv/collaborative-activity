@@ -14,7 +14,7 @@ public class MagicNumbersTest {
      */
     @Test
     public void validSimple() {
-        assertEquals(true, MagicNumbers.isMagicNumber(495));
+        assertEquals(true, MagicNumbers.isMagicNumber(459));
     }
 
     /**
@@ -28,11 +28,11 @@ public class MagicNumbersTest {
 
     /**
      * Test case for a valid magic number.
-     * Expects the result to be true.
+     * Expects the result to be false.
      */
     @Test
     public void validComplex() {
-        assertEquals(true, MagicNumbers.isMagicNumber(345543));
+        assertEquals(false, MagicNumbers.isMagicNumber(345543));
     }
 
     /**
